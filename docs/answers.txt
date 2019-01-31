@@ -1,0 +1,106 @@
+a) 
+   Username for 'https://github.com': TimothyBarao
+   Password for 'https://TimothyBarao@github.com': 
+   Counting objects: 7, done.
+   Delta compression using up to 2 threads.
+   Compressing objects: 100% (5/5), done.
+   Writing objects: 100% (7/7), 854 bytes | 0 bytes/s, done.
+   Total 7 (delta 1), reused 0 (delta 0)
+   remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+   To https://github.com/TimothyBarao/Assignment1
+      f7a5d56..d00c937  master -> master
+
+b) 
+   There has been a total of 10 commits. 
+   The command below is what was used to determine this:
+
+   'git log --all --oneline | wc -l'
+
+   'git log --all --online' will return every commit made, with only the subject line of the commit
+   'wc -l' will count each line, or commit in this case, to get total number of commits. Useful if there are many commits.
+
+c)
+   It was last modified on: "Thu Sep 15 10:29:34 2016 -0400"
+   The command below is what was used to determine this:
+
+   'git log .gitignore'
+
+   This returns all of the commits involving this file, and the last commit was on the date listed above.
+
+d)
+   Branches can be useful to make changes and test them before pushing the changes to live branch. In other words, you can have 
+   an "experimental/development" branch where new changes can be tested, and then the master branch can be the live/finished version.
+   Once the new changes have been fully tested and verified, you can then push the changes on the experimental to the master branch, 
+   making the new changes live to the public.
+
+   They can also be useful to allow different teams to work on different parts of the software. An example would be one team that 
+   works on the user interface, and another team that works on the backend. Each team can have their own branch such that any 
+   changes they make will not interfere with another team's work.
+   
+e)
+   'git log' shows commits, their IDs, who made the commit, when it was made, and the commit message in the repository.
+   
+   'git status' shows differences, if any, between the local repository and the remote repository. Also shows any commits that
+   have not yet been pushed, as well as any changes that have not yet been added to a commit.  
+
+f)
+   'git log Weapon.java'
+
+    This command will show all of the commits that involved the file 'Weapon.java'.   
+
+g)
+   'git log -i --grep="file"'
+   
+   This command essentially does a grep command on the commit messages, look for all that contain the workd 'file'. The -i flag will
+   ignore casing, if that is what is desired.
+
+   Note, this will grab commits with words that hav ethe substring 'file' in it, i.e. it will also get commites with the 
+   word 'files'. To grab commits that have the exact word 'file', then the command below would suffice.
+
+   'git log -i --grep="\<file\>"'
+   
+   The '<' and '>' tell grep to match the exact string, while the '\' are just escapes to allow the '<' and '>' to be used.
+
+h)
+   I) Inheritance is the ability for classes to recieve functionalities and data from other classes. An example would be a
+   "Triangle" class that recieves/inherits methods from a "Shape" class. You can also have multiple classes inherit from a class, so
+   You can have a "Circle" class, "Square" class, and so on, that all inherit from the "Shape" class. 
+   
+   II) Polymorphism is the ability for different classes to share the same interface/methods, but the methods work with different
+   date in each class. Using the Shape class as an example, their can be multiple classes that inherit from Shape: "Circle", 
+   "Square", "Triangle", etc. Shape can have a function called Area() that returns the area of the shape, and each of the previous
+   classes inherits this method from the Shape class. However, the way that the are is calculated differs for each shape, so while
+   the method is inherited and is present across all classes, how the function works and the data it uses differs. 
+   
+   III) Encapsulation is the ability to for class to have information "hidden" from public access by having methods that control
+   the information. Essentially, a class can have private data, or methods, that only public methods within the class have access to. 
+   This allows for control of how the inner workings of the class can change, as only the public methods may access them, thus
+   ensuring that no outside method/class/user can directly modify the private information. An example would be the class "Fraction"
+   that has numerator and denominator variables. To avoid directly changing the denominator, so that division by zero can not occur
+   for example, it can have a function called "Change(int num, int denom);" that can have error checking and is the only way to 
+   change the numberator and denominator of the fraction.
+
+i)
+   The "Dictator and Lieutenants" workflow model involves having various managers, known as "Lieutenants", where each one is in 
+   charge of a different part of a repository. There is then a head manager, known as the "Dictator" that is manages all of the 
+   Lieutenants. The Dictator will have this own repository that he or she pushes from, typically to another repository that the 
+   Lieutenants then need to pull from.
+
+   The "Integration Management" workflow model involves each developer having their own public repository, as well as having the 
+   ability to read, but not make changes to, other people's repositories. There would also exist an "official" repository, where 
+   the live/current version of the software would exist. Developers would clone this repository, make changes, push said changes,
+   and then ask the manager of the offical project to pull those changes.    
+   
+   The main difference between the two workflows, is the control of changes made to the software, and the overall management of it. 
+   In the first workflow model, you have multiple managers/maintainers that control different parts of the repository that can each
+   test and verify each change that is made. The second workflow model however, only has one manager/maintainer that must look 
+   through and test all of the changes made.
+
+j)
+   Dictator and Lieutenants would work best as it allows for more management and better control over how changes are made to the 
+   software. The team of 100 developers would most likely be split such that multiple teams form to work on different parts of the 
+   repository. The lieutenants can then monitor and confirm changes that each team makes, before sending them to the dictator. If 
+   the Integration Management workflow model is used instead, then there would be only one manager/maintainer that would have to 
+   manage 100 different repositories with constant changes being made.
+
+      
