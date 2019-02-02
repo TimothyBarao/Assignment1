@@ -18,9 +18,16 @@ public class CrazyRandomSword extends BasicWeapon implements Weapon {
 
     @Override
     public int hit(int armor) {
-        Random damage = new Random();
+        Random dam = new Random();
         Random arm = new Random();
-        return damage.nextInt(100) - arm.nextInt((int)(armor/3));
+
+        int damage = (dam.nextInt(96) + 4);
+        int newArmor = armor - (arm.nextInt((int)((armor-3)/3)) + 3);
+
+        if(damage - newArmor < 0) {
+            return 0;
+        }
+        return(damage - newArmor);
     }
 
 }
