@@ -66,11 +66,11 @@ h)
    "Triangle" class that recieves/inherits methods from a "Shape" class. You can also have multiple classes inherit from a class, so
    You can have a "Circle" class, "Square" class, and so on, that all inherit from the "Shape" class. 
    
-   II) Polymorphism is the ability for different classes to share the same interface/methods, but the methods work with different
-   date in each class. Using the Shape class as an example, their can be multiple classes that inherit from Shape: "Circle", 
-   "Square", "Triangle", etc. Shape can have a function called Area() that returns the area of the shape, and each of the previous
-   classes inherits this method from the Shape class. However, the way that the are is calculated differs for each shape, so while
-   the method is inherited and is present across all classes, how the function works and the data it uses differs. 
+   II) Polymorphism is the ability for different classes to share the same interface/methods, but the methods have different 
+    implementations in each class. Using the Shape class as an example, their can be multiple classes that inherit from Shape: 
+   "Circle", "Square", "Triangle", etc. Shape can have a function called Area() that returns the area of the shape, and each of the 
+   previous classes inherits this method from the Shape class. However, the way that the are is calculated differs for each shape, 
+   so while the method is inherited and is present across all classes, how the function works and the data it uses differs. 
    
    III) Encapsulation is the ability to for class to have information "hidden" from public access by having methods that control
    the information. Essentially, a class can have private data, or methods, that only public methods within the class have access to. 
@@ -103,4 +103,11 @@ j)
    the Integration Management workflow model is used instead, then there would be only one manager/maintainer that would have to 
    manage 100 different repositories with constant changes being made.
 
-      
+5.)
+   The RoleGame prototype uses polymorphism and encapsulation. It uses encapsulation by having a protected varaible in the 
+   BasicWeapon class, but also using the WeaponFactory class to create weapons. The RoleGame class uses the WeaponFactory class
+   to create the weapons, meaning that it can not directly create the weapons, but must go through WeaponFactory.
+  
+   It uses polymorphism by having the weapon classes share the same two methods, int hit() and int hit(int armor). While they all
+   have the same methods, they each have different implementations. They also share the same Weapon interface.     
+
