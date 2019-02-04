@@ -30,6 +30,13 @@ public class RoleGame {
         System.out.println("Crazy random sword was able to do " + weapon.hit(medArmor) + " of damage due to an armor with "+medArmor+ " points.");
         System.out.println("Crazy random sword was able to do " + weapon.hit(highArmor) + " of damage due to an armor with "+highArmor+ " points.");
 
+        weapon = WeaponFactory.getWeapon("sword of fate");
+        System.out.println("Sword of fate has " + weapon.hit() + " of damage.");
+
+        System.out.println("Sword of fate was able to do " + weapon.hit(armor) + " of damage due to an armor with "+armor+ " points.");
+        System.out.println("Sword of fate was able to do " + weapon.hit(medArmor) + " of damage due to an armor with "+medArmor+ " points.");
+        System.out.println("Sword of fate was able to do " + weapon.hit(highArmor) + " of damage due to an armor with "+highArmor+ " points.");
+
         //TODO: Add the remaining weapons here
 
     }
